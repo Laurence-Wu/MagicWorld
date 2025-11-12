@@ -11,10 +11,11 @@ for i in range(3): # for testing reasons, I just set the number of enemies to 3
     enemies.append(enemy)
 plotter = Plotter(enemies)
 
-while(user.health > 0 and enemy):
+current_enemy_index = 0
+while(user.health > 0 and len(enemies) > 0):
     user_action = input("What do you want to do?")
     if user_action == "attack":
-        user.attack(enemy)
+        user.attack(enemies[current_enemy_index])
     elif user_action == "defend":
         user.defend()
     elif user_action == "cast spell":
@@ -23,3 +24,5 @@ while(user.health > 0 and enemy):
         user.run_away()
     else:
         print("Invalid action.")
+
+    current_enemy_index += 1
