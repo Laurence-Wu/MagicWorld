@@ -6,7 +6,7 @@ os.environ["TRANSFORMERS_CACHE"] = "/data/xwu488/transformers"
 os.environ["HF_DATASETS_CACHE"] = "/data/xwu488/datasets"
 os.environ["HF_MODULES_CACHE"] = "/data/xwu488/modules"
 os.environ["TORCH_HOME"] = "/data/xwu488/torch"
-
+os.environ["HF_TOKEN"] = "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"
 
 client = OpenAI(
     base_url="https://router.huggingface.co/v1",
