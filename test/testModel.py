@@ -19,7 +19,6 @@ os.environ["TORCH_HOME"] = os.path.join(CACHE_DIR, "torch")
 pipe = pipeline(
     "text-generation",
     model="deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-    cache_dir=CACHE_DIR,
     trust_remote_code=True,
 )
 messages = [
